@@ -31,7 +31,7 @@ import {
   BookOpen,
   Clock,
   Bookmark,
-  BookmarkCheck,
+
   Building,
   Cpu,
   ShieldCheck,
@@ -2946,7 +2946,7 @@ function ContractIntelTool({ onClose, profile }) {
                   <div style={{ fontFamily: fonts.mono, fontSize: 10, color: colors.amber, marginTop: 4 }}>Due: {contract.responseDeadLine}</div>
                 </div>
                 <button onClick={() => setSavedIds(p => p.includes(contract.noticeId) ? p.filter(i => i !== contract.noticeId) : [...p, contract.noticeId])} style={{ padding: 8, background: savedIds.includes(contract.noticeId) ? colors.cyanLight : "transparent", border: `1px solid ${savedIds.includes(contract.noticeId) ? colors.cyan : colors.border}`, borderRadius: 6, cursor: "pointer" }}>
-                  {savedIds.includes(contract.noticeId) ? <BookmarkCheck size={16} style={{ color: colors.cyan }} /> : <Bookmark size={16} style={{ color: colors.textMuted }} />}
+                  {savedIds.includes(contract.noticeId) ? <Bookmark size={16} style={{ color: colors.cyan }} /> : <Bookmark size={16} style={{ color: colors.textMuted }} />}
                 </button>
               </div>
             ))}
